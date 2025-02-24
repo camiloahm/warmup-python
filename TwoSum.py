@@ -1,6 +1,5 @@
 from typing import List
 
-
 # https://leetcode.com/problems/two-sum/description/
 class TwoSum:
     def two_sum(self, nums: List[int], target: int) -> List[int]:
@@ -11,6 +10,15 @@ class TwoSum:
                         return [outer_index, inner_index]
                 else:
                     break
+
+    def twoSum_2(self, nums: List[int], target: int) -> List[int]:
+        length = len(nums)
+        for i in range(length - 1):
+            for j in range(i + 1, length):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+        return []  # No solution fou
+
 
     def two_sum_efficient(self, nums: List[int], target: int) -> List[int]:
         num_map = {}
