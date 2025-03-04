@@ -11,7 +11,7 @@ class Anagram:
         if len(t) != len(s):
             return False
 
-        # Conver s to array and add to dictionary to count each letter
+        # Convert s to array and add to dictionary to count each letter
         characters_word1 = list(s)
         characters_word2 = list(t)
         word1_dictionary = {}
