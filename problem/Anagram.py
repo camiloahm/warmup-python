@@ -3,6 +3,11 @@ from typing import Dict
 
 class Anagram:
 
+    def isAnagramBySorting(self, s: str, t: str) -> bool:
+        s = sorted(s)
+        t = sorted(t)
+        return s == t
+
     def isAnagram(self, s: str, t: str) -> bool:
 
         s = s.strip()
@@ -40,3 +45,6 @@ if __name__ == '__main__':
     anagram = Anagram()
     print(anagram.isAnagram("anagram", "nagaram"))
     print(anagram.isAnagram("rat", "car"))
+
+    print(anagram.isAnagramBySorting("anagram", "nagaram"))
+    print(anagram.isAnagramBySorting("rat", "car"))
